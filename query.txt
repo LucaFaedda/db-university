@@ -23,5 +23,10 @@ SOLUTION
     FROM `courses` 
     WHERE `cfu` > 10;
 
-3)
+3) /* da fare ancora */
+
+4)
+    SELECT *
+    FROM `courses`
+    WHERE `period` = 'I semestre' AND `year` = 1;
 
