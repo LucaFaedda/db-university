@@ -40,3 +40,7 @@ SOLUTION
     SELECT * 
     FROM `degrees` 
     WHERE `level` = 'magistrale';
+
+7) 
+    SELECT * 
+    FROM `departments` ;
