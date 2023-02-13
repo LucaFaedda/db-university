@@ -15,3 +15,8 @@ superare ciascuno dei suoi esami
     JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`
     WHERE `degrees`.`name` LIKE "Corso di Laurea in Economia";
 
+2)
+    SELECT `degrees`.*
+    FROM `degrees` 
+    JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
+    WHERE `departments`.`name` LIKE "Dipartimento di Neuroscienze" AND `degrees`.`level` LIKE "magistrale";
