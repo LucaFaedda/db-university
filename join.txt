@@ -33,3 +33,9 @@ superare ciascuno dei suoi esami
     JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`
     JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`  
     ORDER BY `students`.`surname`  ASC;
+
+5) 
+    SELECT `courses`.* , `courses`.`id` as corso_id, `teachers`.`id` as id_insegnante
+    FROM `course_teacher` 
+    JOIN `courses` ON `course_teacher`.`course_id` = `courses`.`id`
+    JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id`;
