@@ -20,3 +20,9 @@ GROUP BY
     SELECT AVG(`vote`) as media_voto, `exam_id`
     FROM `exam_student` 
     GROUP BY `exam_id`;
+
+4)
+    SELECT COUNT(*) as corsi_laurea, `departments`.`name`
+    FROM `departments` 
+    JOIN `degrees` ON `degrees`.`department_id` = `departments`.`id`
+    GROUP BY `departments`.`name`;
