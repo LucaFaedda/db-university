@@ -39,3 +39,13 @@ superare ciascuno dei suoi esami
     FROM `course_teacher` 
     JOIN `courses` ON `course_teacher`.`course_id` = `courses`.`id`
     JOIN `teachers` ON `course_teacher`.`teacher_id` = `teachers`.`id`;
+
+6) 
+    /* non correto? */
+    SELECT `teachers`.*, `departments`.`name` as nome_dipartimento
+    FROM `teachers`
+    JOIN `course_teacher` ON `teachers`.`id` = `course_teacher`.`teacher_id`
+    JOIN `courses` ON `courses`.`id` = `course_teacher`.`course_id`
+    JOIN `degrees` ON `degrees`.`id` = `courses`.`degree_id`
+    JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
+    WHERE `departments`.`name` LIKE "Dipartimento di Matematica";
