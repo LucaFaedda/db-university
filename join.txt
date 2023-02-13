@@ -20,3 +20,9 @@ superare ciascuno dei suoi esami
     FROM `degrees` 
     JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`
     WHERE `departments`.`name` LIKE "Dipartimento di Neuroscienze" AND `degrees`.`level` LIKE "magistrale";
+
+3)
+    SELECT `courses`.* , `course_teacher`.`teacher_id`
+    FROM `courses` 
+    JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id`
+    WHERE `course_teacher`.`teacher_id` = 44;
