@@ -8,7 +8,9 @@ GROUP BY
 
 1)
 
-/*  da fare ancora */ 
+    SELECT COUNT(*) as numero_inscritti, YEAR(`enrolment_date`) as anno
+    FROM `students` 
+    GROUP BY anno;
 
 
 2) 
