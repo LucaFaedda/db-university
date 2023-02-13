@@ -26,3 +26,10 @@ superare ciascuno dei suoi esami
     FROM `courses` 
     JOIN `course_teacher` ON `course_teacher`.`course_id` = `courses`.`id`
     WHERE `course_teacher`.`teacher_id` = 44;
+
+4)
+    SELECT `students`.`name` as nome_studente, `students`.`surname` as cognome_studente, `degrees`.`id` as id_corso , `departments`.`id` as id_dipartimento
+    FROM `students` 
+    JOIN `degrees` ON `students`.`degree_id` = `degrees`.`id`
+    JOIN `departments` ON `degrees`.`department_id` = `departments`.`id`  
+    ORDER BY `students`.`surname`  ASC;
