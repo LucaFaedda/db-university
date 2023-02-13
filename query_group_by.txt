@@ -15,3 +15,8 @@ GROUP BY
     SELECT COUNT(*) as numero_insegnanti, `office_address`
     FROM `teachers` 
     GROUP BY `office_address`;
+
+3)
+    SELECT AVG(`vote`) as media_voto, `exam_id`
+    FROM `exam_student` 
+    GROUP BY `exam_id`;
