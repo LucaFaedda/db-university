@@ -49,3 +49,13 @@ superare ciascuno dei suoi esami
     JOIN `degrees` ON `degrees`.`id` = `courses`.`degree_id`
     JOIN `departments` ON `departments`.`id` = `degrees`.`department_id`
     WHERE `departments`.`name` LIKE "Dipartimento di Matematica";
+
+7) BONUS NON CONTARE SOLO PER APPUNTI PERSONALI
+
+    SELECT `students`.`id` , `students`.`name`,`students`.`surname`, `courses`.`name`, COUNT(`exam_student`.`voto`) as numero_tentativi, MAX(`exam_student`.`voto`) as voto_massimo
+    FROM `students` 
+    JOIN ``exam_student` ON `students`.`id` = `exam_student`.`students_id`
+    JOIN `exams` ON `exam_student`.`exam_id` = `exam`.`id`
+    JOIN `courses` ON `exams`.`course_id` = `courses`.`id`
+    GROUP BY `students`.`id`, `courses`.`id`
+    HAVING `voto_massimo` >= 18
